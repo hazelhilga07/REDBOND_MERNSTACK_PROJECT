@@ -1,0 +1,861 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* Container */
+.container {
+  max-width: 400px;
+  margin: 80px auto;
+  padding: 25px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Headings */
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Form */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Inputs */
+input, select, button {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #bbb;
+  font-size: 14px;
+}
+
+/* Button */
+button {
+  margin-top: 20px;
+  background: #d6336c;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: darkred;
+}
+
+/* Dashboard */
+.dashboard {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.dashboard h3 {
+  margin-top: 20px;
+  color: crimson;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* -------------------- Dashboard -------------------- */
+
+.dashboard-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  padding: 2rem 1rem;
+  background: #fff7f7; /* soft light background */
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+  position: relative;
+}
+
+/* ---------- Header ---------- */
+.dashboard-header {
+  width: 100%;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #ffe5e5;
+  border-bottom: 2px solid #ffccd5;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+
+.app-name {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #d6336c;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.profile-btn {
+  padding: 0.5rem 1.2rem;
+  background: #ea3b61;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.profile-btn:hover {
+  background: #c62828;
+  transform: translateY(-2px);
+}
+
+/* ---------- Branding ---------- */
+.logo-section {
+  margin-top: 6rem; /* push below fixed header */
+  margin-bottom: 2rem;
+}
+.logo span {
+  font-size: 10rem;
+  animation: pulseDrop 1.5s infinite;
+}
+@keyframes pulseDrop {
+  0%, 100% { transform: scale(1); opacity: 0.8; }
+  50% { transform: scale(1.2); opacity: 1; }
+}
+
+.app-title {
+  font-size: 6rem;
+  font-weight: 700;
+  color: #222;
+  margin: 0.5rem 0;
+}
+.subtitle {
+  font-size: 3rem;
+  color: #666;
+  font-style: italic;
+  margin-bottom: 70px;
+}
+
+/* ---------- Buttons ---------- */
+.button-section {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.main-btn {
+  padding: 1rem 2rem;
+  font-size: 1.05rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  min-width: 500px;
+}
+
+/* Donate Button */
+.donate-btn {
+  background: #e63946;
+  color: #fff;
+  box-shadow: 0 6px 12px rgba(230, 57, 70, 0.3);
+}
+.donate-btn:hover {
+  background: #c62828;
+  transform: translateY(-3px) scale(1.03);
+}
+
+/* Need Button */
+.need-btn {
+  background: #f1f1f1;
+  color: #1d3557;
+  border: 2px solid #1d3557;
+}
+.need-btn:hover {
+  background: #a8dadc;
+  color: #073b4c;
+  transform: translateY(-3px) scale(1.03);
+}
+
+
+
+
+
+
+
+
+
+/* advance dashboard Header */
+.dashboard-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.app-name {
+  font-size: 2.2rem;
+  color: #d6336c;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Form styling */
+.request-form {
+  margin-top: 2rem;
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+  max-width: 500px;
+}
+
+/* Checkbox container to align properly */
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 500;
+  font-size: 1rem;
+  margin-top: 0.5rem;
+}
+
+/* Customize the checkbox itself */
+.checkbox-label input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  accent-color: #d6336c; /* changes check color */
+  cursor: pointer;
+}
+
+/* Inputs, select, textarea */
+.request-form input,
+.request-form select,
+.request-form textarea {
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  width: 100%;
+  box-sizing: border-box;
+  transition: border 0.2s;
+}
+
+.request-form input:focus,
+.request-form select:focus,
+.request-form textarea:focus {
+  border-color: #d6336c;
+  outline: none;
+}
+
+/* Submit button */
+.accept-btn {
+  padding: 0.75rem;
+  background-color: #d6336c;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.accept-btn:hover {
+  background-color: #b02a57;
+}
+.page-title {
+  font-size: 2.4rem;
+  color: #d6336c;
+  font-weight: 700;
+  margin-top: 2rem;
+
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+
+
+
+
+
+
+
+/*Landing */
+/* App.css */
+
+/* Global Landing Container */
+.landing-container {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Center vertically */
+  background: linear-gradient(135deg, #ff4d6d, #ffb3c1, #ffe5e5);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+  overflow: hidden;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Animated Gradient Background */
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Floating Blood Drops */
+.blood-drop {
+  position: absolute;
+  width: 12px;
+  height: 20px;
+  background: red;
+  border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+  opacity: 0.7;
+  animation: floatDrop linear infinite;
+}
+.blood-drop:nth-child(1) { left: 10%; animation-duration: 6s; animation-delay: 0s; }
+.blood-drop:nth-child(2) { left: 25%; animation-duration: 8s; animation-delay: 1s; }
+.blood-drop:nth-child(3) { left: 40%; animation-duration: 5s; animation-delay: 2s; }
+.blood-drop:nth-child(4) { left: 55%; animation-duration: 7s; animation-delay: 3s; }
+.blood-drop:nth-child(5) { left: 70%; animation-duration: 6.5s; animation-delay: 4s; }
+.blood-drop:nth-child(6) { left: 15%; animation-duration: 7.5s; animation-delay: 2s; }
+.blood-drop:nth-child(7) { left: 35%; animation-duration: 6s; animation-delay: 1s; }
+.blood-drop:nth-child(8) { left: 50%; animation-duration: 5.5s; animation-delay: 3s; }
+.blood-drop:nth-child(9) { left: 75%; animation-duration: 7s; animation-delay: 0s; }
+.blood-drop:nth-child(10) { left: 90%; animation-duration: 6.2s; animation-delay: 4s; }
+
+@keyframes floatDrop {
+  0% { transform: translateY(0) scale(1); opacity: 0.7; }
+  50% { transform: translateY(-100px) scale(1.1); opacity: 1; }
+  100% { transform: translateY(-200px) scale(0.9); opacity: 0; }
+}
+
+/* Center Frame */
+.landing-frame {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 2rem;
+  border-radius: 2rem;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(15px);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+  z-index: 10;
+  max-width: 450px;
+  width: 90%;
+}
+
+/* Heading */
+.landing-title {
+  color: white;
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  text-shadow: 2px 2px 10px rgba(0,0,0,0.2);
+  animation: bounceText 2s infinite;
+}
+@keyframes bounceText {
+  0%,100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}
+
+/* Card */
+.landing-card {
+  background: white;
+  border-radius: 2rem;
+  padding: 2rem;
+  width: 100%;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.landing-card:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 30px 50px rgba(0,0,0,0.25);
+}
+
+/* Heart Logo */
+.logo-circle {
+  width: 80px;
+  height: 80px;
+  background: #ffe5e5;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto 1rem auto;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+}
+.heart {
+  font-size: 2.5rem;
+  color: #ff4d6d;
+  animation: heartbeat 1s infinite;
+}
+@keyframes heartbeat {
+  0%,100% { transform: scale(1); }
+  25%,75% { transform: scale(1.2); }
+  50% { transform: scale(1); }
+}
+
+/* Card Text */
+.card-title {
+  color: #ff4d6d;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  font-size: 1.25rem;
+}
+.card-desc {
+  color: #555;
+  font-size: 0.9rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Buttons */
+.button-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+.button-primary {
+  background-color: #ff4d6d;
+  color: white;
+  padding: 0.75rem;
+  border-radius: 1rem;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.button-primary:hover {
+  background-color: #e64460;
+  transform: scale(1.05);
+}
+.button-secondary {
+  background: white;
+  border: 2px solid #ff4d6d;
+  color: #ff4d6d;
+  padding: 0.75rem;
+  border-radius: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.button-secondary:hover {
+  background-color: #ffe5e5;
+  transform: scale(1.05);
+}
+
+/* Footer */
+.footer-text {
+  color: white;
+  margin-top: 1.5rem;
+  font-size: 0.9rem;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+}
+
+
+
+
+
+/*profile page*/
+
+/* Profile card specific adjustments */
+.profile-card .profile-details p {
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 0.75rem;
+}
+.profile-card .profile-details p strong {
+  color: #ff4d6d; /* highlight labels in red */
+}
+
+/* Optional: Center buttons nicely */
+.profile-card .button-group {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+
+
+
+
+
+/*---------------------donate-----------------*/
+
+.donate-container {
+  max-width: 400px;
+  margin: 2rem auto;
+  font-family: 'Poppins', sans-serif;
+}
+
+.card {
+  background-color: #ffe5e5;
+  padding: 1rem 1.2rem;
+  margin-bottom: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.card-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.icon {
+  margin-right: 0.7rem;
+  font-size: 1.2rem;
+}
+
+.location-item {
+  background-color: #fff;
+  padding: 0.5rem;
+  margin-top: 0.5rem;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+}
+
+.location-number {
+  background-color: #ff4c5b;
+  color: #fff;
+  border-radius: 50%;
+  width: 1.3rem;
+  height: 1.3rem;
+  text-align: center;
+  line-height: 1.2rem;
+  margin-right: 0.5rem;
+  font-size: 0.8rem;
+}
+
+/* Toggle Switch */
+.toggle-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 24px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 24px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 20px;
+  left: 2px;
+  bottom: 2px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #ff4c5b;
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*---------------------donate-----------------*/
+
+
+
+
+/* -------------------- RequestBlood Page -------------------- */
+
+/* Page Container */
+.dashboard-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  padding: 2rem 1rem;
+  background: #fff7f7; /* soft pink background */
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+}
+
+/* Page Title */
+.page-title {
+  font-size: 2.4rem;
+  color: #d6336c;
+  font-weight: 700;
+  margin-top: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Form Card */
+.request-form {
+  margin-top: 2rem;
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+  max-width: 500px;
+}
+
+/* Form Inputs & Textarea */
+.request-form input,
+.request-form select,
+.request-form textarea {
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  width: 100%;
+  box-sizing: border-box;
+  transition: border 0.2s;
+}
+
+.request-form input:focus,
+.request-form select:focus,
+.request-form textarea:focus {
+  border-color: #d6336c;
+  outline: none;
+}
+
+/* Checkbox Styling */
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 500;
+  font-size: 1rem;
+  margin-top: 0.5rem;
+}
+
+.checkbox-label input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  accent-color: #d6336c;
+  cursor: pointer;
+}
+
+/* Submit Button */
+.accept-btn {
+  padding: 0.75rem;
+  background-color: #d6336c;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.accept-btn:hover {
+  background-color: #b02a57;
+}
+
+/* Back Button */
+.back-btn {
+  margin-top: 1.5rem;
+  padding: 0.75rem 1.2rem;
+  background-color: #ffccd5;
+  color: #d6336c;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.back-btn:hover {
+  background-color: #ffb3c1;
+}
+
+/* Donor List Table */
+.donor-list {
+  margin-top: 2rem;
+  width: 100%;
+  max-width: 800px;
+  overflow-x: auto;
+}
+
+.request-table {
+  width: 100%;
+  border-collapse: collapse;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.request-table th,
+.request-table td {
+  padding: 0.75rem 1rem;
+  text-align: center;
+  font-size: 0.95rem;
+  border-bottom: 1px solid #eee;
+}
+
+.request-table th {
+  background-color: #ffe5e5;
+  color: #d6336c;
+  font-weight: 600;
+}
+
+.request-table tr:nth-child(even) {
+  background-color: #fff5f5;
+}
+
+.request-table tr:hover {
+  background-color: #ffdce0;
+  transition: 0.3s;
+}
+
+
+
+
+/*DONOR DASHBOARD*/
+.dashboard-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  padding: 2rem 1rem;
+  background: #fff7f7;
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+}
+
+.page-title {
+  font-size: 2.4rem;
+  color: #d6336c;
+  font-weight: 700;
+  margin-top: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.donor-list {
+  margin-top: 2rem;
+  width: 100%;
+  max-width: 800px;
+  overflow-x: auto;
+}
+
+.request-table {
+  width: 100%;
+  border-collapse: collapse;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.request-table th,
+.request-table td {
+  padding: 0.75rem 1rem;
+  text-align: center;
+  font-size: 0.95rem;
+  border-bottom: 1px solid #eee;
+}
+
+.request-table th {
+  background-color: #ffe5e5;
+  color: #d6336c;
+  font-weight: 600;
+}
+
+.request-table tr:nth-child(even) {
+  background-color: #fff5f5;
+}
+
+.request-table tr:hover {
+  background-color: #ffdce0;
+  transition: 0.3s;
+}
+
+.back-btn {
+  margin-top: 1.5rem;
+  padding: 0.75rem 1.2rem;
+  background-color: #ffccd5;
+  color: #d6336c;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.back-btn:hover {
+  background-color: #ffb3c1;
+}
+
+
+
+

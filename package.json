@@ -1,0 +1,9 @@
+{
+  "name": "redbond",
+  "private": true,
+  "scripts": {
+    "install": "npm start && npm run dev",
+    "start": "npm start --prefix backend",
+    "build": "npm run build --prefix frontend"
+  }
+}
