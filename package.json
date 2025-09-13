@@ -2,8 +2,7 @@
   "name": "redbond",
   "private": true,
   "scripts": {
-    "install": "npm start && npm run dev",
-    "start": "npm start --prefix backend",
-    "build": "npm run build --prefix frontend"
+    "build": "npm install --prefix client && npm run build --prefix client",
+    "start": "node backend/server.js"
   }
 }
