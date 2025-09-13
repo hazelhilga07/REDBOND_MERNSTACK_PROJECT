@@ -40,7 +40,7 @@ export default function Donate() {
         { headers: { Authorization: `Bearer ${token}` } }
       );
       alert("Donor registered successfully!");
-      navigate("/donor-dashboard"); // navigate to DonorDashboard
+      navigate("/DonorDashboard"); // navigate to DonorDashboard
     } catch (error) {
       console.error(error);
       alert("Failed to register donor");
