@@ -1,30 +1,29 @@
+// server/routes/donateRoutes.js
 import express from "express";
+import {
+  getAllDonors,
+  createDonor,
+  getDonorById,
+  updateDonor,
+  deleteDonor,
+} from "../controllers/donateController.js";
 
 const router = express.Router();
 
-// @route   GET /api/donors
+// Block root
 router.get("/", (req, res) => {
   res.status(401).json({ message: "Not authorized, no token" });
 });
 
-// @route   POST /api/donors
-router.post("/", (req, res) => {
-  res.status(401).json({ message: "Not authorized, no token" });
-});
+// Allow creating a donor
+router.post("/", createDonor);
 
-// @route   GET /api/donors/:id
-router.get("/:id", (req, res) => {
-  res.status(401).json({ message: "Not authorized, no token" });
-});
+// Fetch all donors on a separate route
+router.get("/all", getAllDonors);
 
-// @route   PUT /api/donors/:id
-router.put("/:id", (req, res) => {
-  res.status(401).json({ message: "Not authorized, no token" });
-});
-
-// @route   DELETE /api/donors/:id
-router.delete("/:id", (req, res) => {
-  res.status(401).json({ message: "Not authorized, no token" });
-});
+// Optional: individual donor operations (protected by ID)
+router.get("/:id", getDonorById);
+router.put("/:id", updateDonor);
+router.delete("/:id", deleteDonor);
 
 export default router;
